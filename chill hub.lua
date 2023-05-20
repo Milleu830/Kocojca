@@ -4231,7 +4231,7 @@ if getgenv().Save["ChooseMet"] == nil then
     getgenv().Save["ChooseMet"] = ""
 end
 
-page8:Drop("Select Method TP", false, {"Angel", "Normal", "Under", "Best"}, function(t)
+page8:Drop("Select Method TP", false, {"Angel", "Normal", "Under", "Behind"}, function(t)
     getgenv().ChooseMet = t 
     getgenv().Save["ChooseMet"] = getgenv().ChooseMet
     if getgenv().Save["AutoSave"] then
@@ -4705,6 +4705,17 @@ page1:Toggle("FastAttack",getgenv().Save["FastAttack"],function(x)
     getgenv().Save["FastAttack"] = x
     if ( not plr.Character:FindFirstChild("Yoru")) then
         create:Notifile("Chill Hub", "U need Equip Yoru", 5)
+        getgenv().Save["FastAttack"] = false
+    end
+    if getgenv().Save["AutoSave"] then
+        SaveSetting()
+    end
+end)
+
+page1:Toggle("FastAttack2",getgenv().Save["FastAttack2"],function(x)
+    getgenv().Save["FastAttack2"] = x
+    if ( not plr.Character:FindFirstChild("Kogatana")) then
+        create:Notifile("Chill Hub", "U need Equip Kogatana", 5)
         getgenv().Save["FastAttack"] = false
     end
     if getgenv().Save["AutoSave"] then
@@ -6567,9 +6578,8 @@ spawn(function()
                                 if getgenv().Save["ChooseMet"] == "Under" then
                                     plr1.HumanoidRootPart.CFrame = plr2.Character.HumanoidRootPart.CFrame * CFrame.new(0,-200,0)
                                 end
-                            else
-                                if getgenv().Save["ChooseMet"] == "Best" then
-                                    plr1.HumanoidRootPart.CFrame = plr2.Character.HumanoidRootPart.CFrame * CFrame.new(500,0,0)
+                                if getgenv().Save["ChooseMet"] == "Behind" then
+                                    plr1.HumanoidRootPart.CFrame = plr2.Character.HumanoidRootPart.CFrame * CFrame.new(200,0,0)
                                 end
                             else
                                 for i,v in pairs(game:GetService("Workspace").ISLAND:GetChildren()) do
@@ -7192,7 +7202,7 @@ spawn(function()
                                                 local args = {
                             [1] = tonumber(serializeTable(attackremote))
                         }
-
+                        
                         game:GetService("Players").LocalPlayer.Character.Yoru.RequestAnimation:FireServer(unpack(args))
                                                 local args = {
                             [1] = tonumber(serializeTable(attackremote))
@@ -7817,8 +7827,8 @@ spawn(function()
                     if getgenv().Save["ChooseMet"] == "Under" then
                         plr1.HumanoidRootPart.CFrame = danhvaodauno().Character.HumanoidRootPart.CFrame * CFrame.new(0,-200,0)
                     end
-                    if getgenv().Save["ChooseMet"] == "Best" then
-                        plr1.HumanoidRootPart.CFrame = plr2.Character.HumanoidRootPart.CFrame * CFrame.new(500,0,0)
+                    if getgenv().Save["ChooseMet"] == "Behind" then
+                        plr1.HumanoidRootPart.CFrame = danhvaodauno().Character.HumanoidRootPart.CFrame * CFrame.new(200,0,0)
                     end
                     if danhvaodauno().Character.Humanoid.Health > 0 and getgenv().Save["mtfa"] == "Flare"  then
                                         
