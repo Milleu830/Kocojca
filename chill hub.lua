@@ -6579,7 +6579,7 @@ spawn(function()
                                     plr1.HumanoidRootPart.CFrame = plr2.Character.HumanoidRootPart.CFrame * CFrame.new(0,-200,0)
                                 end
                                 if getgenv().Save["ChooseMet"] == "Behind" then
-                                    plr1.HumanoidRootPart.CFrame = plr2.Character.HumanoidRootPart.CFrame * CFrame.new(200,200,0)
+                                    plr1.HumanoidRootPart.CFrame = plr2.Character.HumanoidRootPart.CFrame * CFrame.new(200,0,0)
                                 end
                             else
                                 for i,v in pairs(game:GetService("Workspace").ISLAND:GetChildren()) do
@@ -7828,7 +7828,7 @@ spawn(function()
                         plr1.HumanoidRootPart.CFrame = danhvaodauno().Character.HumanoidRootPart.CFrame * CFrame.new(0,-200,0)
                     end
                     if getgenv().Save["ChooseMet"] == "Behind" then
-                        plr1.HumanoidRootPart.CFrame = danhvaodauno().Character.HumanoidRootPart.CFrame * CFrame.new(200,200,0)
+                        plr1.HumanoidRootPart.CFrame = danhvaodauno().Character.HumanoidRootPart.CFrame * CFrame.new(200,0,0)
                     end
                     if danhvaodauno().Character.Humanoid.Health > 0 and getgenv().Save["mtfa"] == "Flare"  then
                                         
