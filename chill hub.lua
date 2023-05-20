@@ -7817,6 +7817,9 @@ spawn(function()
                     if getgenv().Save["ChooseMet"] == "Under" then
                         plr1.HumanoidRootPart.CFrame = danhvaodauno().Character.HumanoidRootPart.CFrame * CFrame.new(0,-200,0)
                     end
+                    if getgenv().Save["ChooseMet"] == "Best" then
+                        plr1.HumanoidRootPart.CFrame = plr2.Character.HumanoidRootPart.CFrame * CFrame.new(500,0,0)
+                    end
                     if danhvaodauno().Character.Humanoid.Health > 0 and getgenv().Save["mtfa"] == "Flare"  then
                                         
                         local args = {
