@@ -30,6 +30,12 @@ elseif _G.cfig == "V3" and not isInMain(game.Players.LocalPlayer.Name) then
 elseif _G.cfig == "Farm" and not isInMain(game.Players.LocalPlayer.Name) then
     print("not main")
     url = "https://raw.githubusercontent.com/Milleu830/BFcfig/main/Farm.json"
+elseif _G.cfig == "Frag2" and not isInMain(game.Players.LocalPlayer.Name) then
+    print("not main")
+    url = "https://raw.githubusercontent.com/GinChaCa/BF_Config/main/Farm_Frag.json"
+elseif _G.cfig == "Frag" and not isInMain(game.Players.LocalPlayer.Name) then
+    print("not main")
+    url = "https://raw.githubusercontent.com/Milleu830/BFcfig/main/Frag.json"
 end
 
 local HttpService = game:GetService("HttpService")
