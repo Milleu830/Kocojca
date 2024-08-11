@@ -13,6 +13,7 @@ local function isInMain(playerName)
 end
 
 if isInMain(game.Players.LocalPlayer.Name) then
+    return
    print("main acc")
    url = "https://raw.githubusercontent.com/Milleu830/BFcfig/main/main.json"
 end
@@ -67,5 +68,3 @@ else
 end
 wait(0.5)
 print("loading script")
-getgenv().Key = "0aa6c60c34e27ae1e69153eb" 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaHub.lua"))()
