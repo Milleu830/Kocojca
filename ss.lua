@@ -1,5 +1,6 @@
 print("Loading Config: " .. _G.cfig)
 local url
+local main = Username
 
 wait(0.3)
 -- Function to check if the player's name is in the 'main' table
