@@ -3,6 +3,7 @@ local url
 local main = Username
 
 wait(0.3)
+
 -- Function to check if the player's name is in the 'main' table
 local function isInMain(playerName)
     for _, name in ipairs(main) do
@@ -14,29 +15,28 @@ local function isInMain(playerName)
 end
 
 if isInMain(game.Players.LocalPlayer.Name) then
-    return
-   print("main acc")
-   url = "https://raw.githubusercontent.com/Milleu830/BFcfig/main/main.json"
-end
-
-if _G.cfig == "Trial" and not isInMain(game.Players.LocalPlayer.Name) then
-    print("not main")
-    url = "https://raw.githubusercontent.com/Milleu830/BFcfig/main/Trial.json"
-elseif _G.cfig == "V3" and not isInMain(game.Players.LocalPlayer.Name) then
-    print("not main")
-    url = "https://raw.githubusercontent.com/Milleu830/BFcfig/main/V3.json"
-elseif _G.cfig == "Farm" and not isInMain(game.Players.LocalPlayer.Name) then
-    print("not main")
-    url = "https://raw.githubusercontent.com/Milleu830/BFcfig/main/Farm.json"
-elseif _G.cfig == "Frag2" and not isInMain(game.Players.LocalPlayer.Name) then
-    print("not main")
-    url = "https://raw.githubusercontent.com/GinChaCa/BF_Config/main/Farm_Frag.json"
-elseif _G.cfig == "Frag" and not isInMain(game.Players.LocalPlayer.Name) then
-    print("not main")
-    url = "https://raw.githubusercontent.com/Milleu830/BFcfig/main/Frag.json"
-elseif _G.cfig == "Gat" and not isInMain(game.Players.LocalPlayer.Name) then
-    print("not main")
-    url = "https://raw.githubusercontent.com/Milleu830/Kocojca/main/PullLever.json"
+    print("main acc")
+    url = "https://raw.githubusercontent.com/Milleu830/BFcfig/main/main.json"
+else
+    if _G.cfig == "Trial" then
+        print("not main")
+        url = "https://raw.githubusercontent.com/Milleu830/BFcfig/main/Trial.json"
+    elseif _G.cfig == "V3" then
+        print("not main")
+        url = "https://raw.githubusercontent.com/Milleu830/BFcfig/main/V3.json"
+    elseif _G.cfig == "Farm" then
+        print("not main")
+        url = "https://raw.githubusercontent.com/Milleu830/BFcfig/main/Farm.json"
+    elseif _G.cfig == "Frag2" then
+        print("not main")
+        url = "https://raw.githubusercontent.com/GinChaCa/BF_Config/main/Farm_Frag.json"
+    elseif _G.cfig == "Frag" then
+        print("not main")
+        url = "https://raw.githubusercontent.com/Milleu830/BFcfig/main/Frag.json"
+    elseif _G.cfig == "Gat" then
+        print("not main")
+        url = "https://raw.githubusercontent.com/Milleu830/Kocojca/main/PullLever.json"
+    end
 end
 
 local HttpService = game:GetService("HttpService")
@@ -61,11 +61,12 @@ if url then
         makefolder(folder)
     end
     
-wait(0.3)
-print("write cfig")
+    wait(0.3)
+    print("write cfig")
     writefile(folder .. "/" .. filename, HttpService:JSONEncode(config))
 else
     warn("URL not set. Configuration may not have been loaded.")
 end
+
 wait(0.5)
 print("loading script")
