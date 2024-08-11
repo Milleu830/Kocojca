@@ -1,9 +1,5 @@
 print("Loading Config: " .. _G.cfig)
 local url
-local main = {
-    'milleu830',
-    'thanksviet1'
-}
 
 wait(0.3)
 -- Function to check if the player's name is in the 'main' table
@@ -36,6 +32,9 @@ elseif _G.cfig == "Frag2" and not isInMain(game.Players.LocalPlayer.Name) then
 elseif _G.cfig == "Frag" and not isInMain(game.Players.LocalPlayer.Name) then
     print("not main")
     url = "https://raw.githubusercontent.com/Milleu830/BFcfig/main/Frag.json"
+elseif _G.cfig == "Gat" and not isInMain(game.Players.LocalPlayer.Name) then
+    print("not main")
+    url = "https://raw.githubusercontent.com/Milleu830/Kocojca/main/PullLever.json"
 end
 
 local HttpService = game:GetService("HttpService")
