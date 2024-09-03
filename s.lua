@@ -49,19 +49,10 @@ local playerName = player.Name  -- Extract player's name as a string
 local folder = "Banana Cat Hub"
 local filename = playerName .. "-BFNew.json"  -- Use player's name for the filename
 
--- Function to delete the folder and all files inside
-local function deleteFolderContents(folder)
-    if isfolder(folder) then
-        for _, file in ipairs(listfiles(folder)) do
-            delfile(file)
-        end
-        delfolder(folder)
-    end
+-- Check if folder does not exist, then create it
+if not isfolder(folder) then
+    makefolder(folder)
 end
-
--- Delete the folder and recreate it
-deleteFolderContents(folder)
-makefolder(folder)
 
 -- Check if the URL is set before proceeding
 if url then
@@ -72,6 +63,7 @@ if url then
     
     wait(0.3)
     print("write cfig")
+    -- Write the configuration file
     writefile(folder .. "/" .. filename, HttpService:JSONEncode(config))
 else
     warn("URL not set. Configuration may not have been loaded.")
