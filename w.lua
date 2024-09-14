@@ -34,8 +34,8 @@ local player = Players.LocalPlayer
 local playerName = player.Name  -- Extract player's name as a string
 
 -- Folder and filename setup
-local folder = "True_W_azure_V2_Beta/ConfigMain"
-local filename = playerName  -- Use player's name for the filename
+local folder = "True W-azure V2_Beta/ConfigMain"
+local filename = playerName .. ".json"  -- Use player's name for the filename
 
 -- Check if folder does not exist, then create it
 if not isfolder(folder) then
