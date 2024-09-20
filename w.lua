@@ -35,12 +35,20 @@ local playerName = player.Name  -- Extract player's name as a string
 
 -- Folder and filename setup
 local folder = "True W-azure V2_Beta/ConfigMain"
-local filename = playerName .. ".json"  -- Use player's name for the filename
-
+local filename = playerName .. ".json"
+local filename2 = playerName .. ".txt"-- Use player's name for the filename
+local main = "True_W_azure_V2_Beta\Main"
+local
 -- Check if folder does not exist, then create it
 if not isfolder(folder) then
     makefolder(folder)
+    makefolder("True_W_azure_V2_Beta\Cache")
+    makefolder(main)
+    makefolder("True_W_azure_V2_Beta\SameAcc")
+    makefolder("True_W_azure_V2_Beta\Theme")
 end
+
+writefile(main .. "/" .. filename2, "True W-azure V2_Beta/ConfigMain/" .. playerName .. ".json"
 
 -- Check if the URL is set before proceeding
 if url then
