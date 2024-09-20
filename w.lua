@@ -48,7 +48,7 @@ if not isfolder(folder) then
     makefolder("True_W_azure_V2_Beta\Theme")
 end
 
-writefile(main .. "/" .. filename2, "True W-azure V2_Beta/ConfigMain/" .. playerName .. ".json"
+writefile(main .. "/" .. filename2, "True W-azure V2_Beta/ConfigMain/" .. playerName .. ".json")
 
 -- Check if the URL is set before proceeding
 if url then
